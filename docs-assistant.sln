@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CDD35AD8-CA8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LlmBasics", "LlmBasics\LlmBasics.csproj", "{25F197ED-200E-41D8-AA46-9702002F1E7B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0981C7CD-2B79-4F12-9580-7A3608D01161}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LlmBasics.Tests", "LlmBasics.Tests\LlmBasics.Tests.csproj", "{0AE227EA-D9E4-49C3-831B-E294839A7C57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +21,17 @@ Global
 		{25F197ED-200E-41D8-AA46-9702002F1E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25F197ED-200E-41D8-AA46-9702002F1E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25F197ED-200E-41D8-AA46-9702002F1E7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AE227EA-D9E4-49C3-831B-E294839A7C57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AE227EA-D9E4-49C3-831B-E294839A7C57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AE227EA-D9E4-49C3-831B-E294839A7C57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AE227EA-D9E4-49C3-831B-E294839A7C57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{25F197ED-200E-41D8-AA46-9702002F1E7B} = {CDD35AD8-CA8E-48D9-B639-205699461AC5}
+		{0AE227EA-D9E4-49C3-831B-E294839A7C57} = {0981C7CD-2B79-4F12-9580-7A3608D01161}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F1934882-B0A4-4DE0-8579-187E16121643}
