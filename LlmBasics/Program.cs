@@ -1,20 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Microsoft.Extensions.AI;
-using OpenAI;
-using System.ClientModel;
+using OllamaSharp;
 
-var token = Environment.GetEnvironmentVariable("GITHUB_TOKEN")
-    ?? throw new InvalidOperationException("GITHUB_TOKEN nije podešen.");
+IChatClient client = new OllamaApiClient(new Uri("http://localhost:11434"), "llama3.2");
 
-IChatClient client = new OpenAIClient(
-        new ApiKeyCredential(token),
-        new OpenAIClientOptions { Endpoint = new Uri("https://models.github.ai/inference") })
-    .GetChatClient("openai/gpt-4.1-mini")
-    .AsIChatClient();
-
-var response = await client.GetResponseAsync("Objasni RAG u dve rečenice.");
-Console.WriteLine($"Text: '{response.Text}'");
-Console.WriteLine($"Finish reason: {response.FinishReason}");
-
+await foreach (var update in client.GetStreamingResponseAsync("Objasni RAG u dve rečenice."))
+    Console.Write(update.Text);
 
 Console.ReadLine();
